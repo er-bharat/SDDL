@@ -7,8 +7,6 @@ Window {
     width: 1920
     height: 1080
     color: "#222"
-    // flags: Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint
-    // visibility: "FullScreen"
 
     // Prevent Alt+F4 and Esc
     Keys.onPressed: {
@@ -25,33 +23,6 @@ Window {
         anchors.fill: parent
         source: "Blue.jpg"
         fillMode: Image.PreserveAspectCrop
-    }
-
-    Rectangle {
-        width: 30
-        height: 30
-        anchors.top: parent.top
-        anchors.right: parent.right
-        anchors.margins: 10
-        radius: 4
-        color: Qt.rgba(0, 0, 1, 0.08)
-        z: 100
-
-        Text {
-            anchors.centerIn: parent
-            text: "✕"
-            font.pixelSize: 18
-            color: "#33aaff"
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            onClicked: Qt.quit()  // You can disable this if you don't want users to quit.
-            hoverEnabled: true
-            cursorShape: Qt.PointingHandCursor
-        }
     }
 
     Rectangle {
